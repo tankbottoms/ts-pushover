@@ -1,0 +1,47 @@
+{
+  "name": "ts-pushover",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "author": "tankbottoms",
+  "license": "MIT",
+  "description": "Pushover module",
+  "scripts": {
+    "build": "tsc",
+    "lint:base": "eslint --ext .js,.json,.ts",
+    "lint": "yarn lint:base 'src/**'",
+    "save": "git add . && echo Enter commit message && read && git commit -m \":octocat: ${REPLY}\" && git push",
+    "start": "node ./lib/index.js"
+  },
+  "lint-staged": {
+    "src/**/*": [
+      "yarn lint:base --fix",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "echo something useful should be checked..."
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "@typescript-eslint/eslint-plugin": "^2.19.2",
+    "@typescript-eslint/parser": "^2.19.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.7",
+    "prettier": "^1.19.1",
+    "ts-node-dev": "^1.0.0-pre.44",
+    "typescript": "^3.7.5"
+  },
+  "engines": {
+    "node": ">=12"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "fs": "^0.0.1-security",
+    "pushover-notifications": "^1.2.2"
+  }
+}
