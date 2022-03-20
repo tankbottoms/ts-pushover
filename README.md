@@ -2,7 +2,7 @@
 
 ### Pushover Notifications for Typescript
 
-![Mr Whiskers](./example.png)
+![Mr Whiskers](example.png)
 
 Mr. Whiskers is the inventor of Proof of Meow.
 
